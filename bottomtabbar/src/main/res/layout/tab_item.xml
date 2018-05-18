@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/tab_item_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/menu_icon3_orange" />
+
+    <TextView
+        android:id="@+id/tab_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_item_iv"
+        android:layout_centerHorizontal="true"
+        android:text="首页" />
+
+    <TextView
+        android:id="@+id/txt_comment_num"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginLeft="-35dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/tab_item_iv"
+        android:background="@drawable/bt_bg_red_oval"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone"
+        android:text="32"
+        android:textSize="10sp" />
+
+</RelativeLayout>
