@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.bypay.yifu.R;
 import com.bypay.yifu.bean.GoodsInfo;
+import com.bypay.yifu.view.InterestSpaceItemDecoration;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
@@ -63,6 +64,7 @@ public class HomeRecommendAdapter extends BaseQuickAdapter<GoodsInfo, BaseViewHo
                 list.add(new GoodsInfo());
             }
             mHomeGoodsAdapterC = new HomeGoodsAdapter_c(list);
+            recyclerView.addItemDecoration(new InterestSpaceItemDecoration(mContext.getResources().getDimensionPixelSize(R.dimen.bottom_1), list.size()));
             recyclerView.setLayoutManager(new GridLayoutManager(mContext, 2));
             recyclerView.setAdapter(mHomeGoodsAdapterC);
         }
