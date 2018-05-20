@@ -15,6 +15,7 @@ import android.widget.TextView.OnEditorActionListener;
 import com.bumptech.glide.Glide;
 import com.bypay.yifu.R;
 import com.bypay.yifu.bean.GoodsInfo;
+import com.bypay.yifu.bean.HomeTabInfo;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.psylife.wrmvplibrary.utils.ToastUtils;
@@ -28,20 +29,21 @@ import java.util.Map;
  * Created by tianchao on 2018/4/4.
  */
 
-public class HomeFunctionAdapter extends BaseQuickAdapter<GoodsInfo, BaseViewHolder> {
+public class HomeFunctionAdapter extends BaseQuickAdapter<HomeTabInfo, BaseViewHolder> {
 
-    private List<GoodsInfo> list;
+    private List<HomeTabInfo> list;
 
-    private Map<Integer, Boolean> isChose = new HashMap<>();
-
-    public HomeFunctionAdapter(List<GoodsInfo> list) {
+    public HomeFunctionAdapter(List<HomeTabInfo> list) {
         super(R.layout.item_home_funciton, list);
         this.list = list;
     }
 
     @Override
-    protected void convert(final BaseViewHolder baseViewHolder, final GoodsInfo mGoodsInfo) {
-
+    protected void convert(final BaseViewHolder baseViewHolder, final HomeTabInfo homeTabInfo) {
+        TextView txtHomeTab = baseViewHolder.getView(R.id.txt_home_tab);
+        ImageView imgHomeTab = baseViewHolder.getView(R.id.image_home_tab);
+        txtHomeTab.setText(homeTabInfo.getTabName());
+        imgHomeTab.setImageResource(homeTabInfo.getTabImage());
     }
 
 }

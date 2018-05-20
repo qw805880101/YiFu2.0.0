@@ -13,6 +13,7 @@ import com.bypay.yifu.Utils.Utils;
 import com.bypay.yifu.base.BaseActivity;
 import com.bypay.yifu.fragment.HomePageFragment;
 import com.bypay.yifu.fragment.ShopCartFragment;
+import com.bypay.yifu.fragment.ShoppingMallFragment;
 import com.bypay.yifu.fragment.WebFragment;
 import com.psylife.wrmvplibrary.utils.StatusBarUtil;
 import com.psylife.wrmvplibrary.utils.ToastUtils;
@@ -34,7 +35,11 @@ public class HomeActivity extends BaseActivity implements OnClickListener, Botto
 
     private CustomFragmentTabHost mCustomFragmentTabHost;
 
-    private Class fragmentArray[] = {HomePageFragment.class, WebFragment.class, ShopCartFragment.class, WebFragment.class};
+    private Class fragmentArray[] = {HomePageFragment.class, ShoppingMallFragment.class, ShopCartFragment.class, WebFragment.class, WebFragment.class};
+
+    private int[] imageIds = {R.mipmap.menu_icon1_orange, R.mipmap.menu_icon1_orange,R.mipmap.menu_icon2_orange, R.mipmap.menu_icon3_orange, R.mipmap.menu_icon4_orange};
+    private int[] imageId = {R.mipmap.menu_icon1_gary, R.mipmap.menu_icon1_gary,R.mipmap.menu_icon2_gary, R.mipmap.menu_icon3_gary, R.mipmap.menu_icon4_gary};
+
 
     FragmentManager fragmentManager;
 
@@ -63,9 +68,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener, Botto
         bottomTabBar.setTabBarBackgroundResource(R.color.back_ececed);
         bottomTabBar.setDividerColor(this.getResources().getColor(R.color.color_ccd0cf));
         mCustomFragmentTabHost = bottomTabBar.getTapHost();
-        String[] mTabs = {"首页", "分类", "购物车", "我的"};
-        int[] imageIds = {R.mipmap.menu_icon1_orange, R.mipmap.menu_icon2_orange, R.mipmap.menu_icon3_orange, R.mipmap.menu_icon4_orange};
-        int[] imageId = {R.mipmap.menu_icon1_gary, R.mipmap.menu_icon2_gary, R.mipmap.menu_icon3_gary, R.mipmap.menu_icon4_gary};
+        String[] mTabs = {"首页", "商城", "分类", "购物车", "我的"};
         /*新建Tabspec选项卡并设置Tab菜单栏的内容和绑定对应的Fragment*/
         for (int i = 0; i < mTabs.length; i++) {
             bottomTabBar.addTabItem(mTabs[i], imageIds[i], imageId[i], fragmentArray[i]);

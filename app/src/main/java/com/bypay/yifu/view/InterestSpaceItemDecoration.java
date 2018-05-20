@@ -16,7 +16,7 @@ public class InterestSpaceItemDecoration extends RecyclerView.ItemDecoration {
 
     public InterestSpaceItemDecoration(int space, int size) {
         this.space = space;
-        this.size = size - 1;
+        this.size = size;
     }
 
     @Override

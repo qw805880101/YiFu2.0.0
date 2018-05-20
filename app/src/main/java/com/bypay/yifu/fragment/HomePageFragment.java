@@ -15,6 +15,9 @@ import com.bypay.yifu.adapter.HomeFunctionAdapter;
 import com.bypay.yifu.adapter.HomeRecommendAdapter;
 import com.bypay.yifu.base.BaseFragment;
 import com.bypay.yifu.bean.GoodsInfo;
+import com.bypay.yifu.bean.HomeBannerInfo;
+import com.bypay.yifu.bean.HomeGoodsInfo;
+import com.bypay.yifu.bean.HomeTabInfo;
 import com.psylife.wrmvplibrary.utils.TitleBuilder;
 
 import java.util.ArrayList;
@@ -64,19 +67,27 @@ public class HomePageFragment extends BaseFragment {
 
     @Override
     public void initUI(View view, @Nullable Bundle savedInstanceState) {
-        List<GoodsInfo> list = new ArrayList<>();
-        for (int i = 0; i < Math.random() * 10; i++) {
-            list.add(new GoodsInfo());
+        List<HomeTabInfo> list = new ArrayList<>();
+        String[] tabNames={"代还信用卡","手机数码","电脑办公","家用电器","办信用卡"};
+        int[] tabImages={R.mipmap.home_tab_btn_icon1,R.mipmap.home_tab_btn_icon2,
+                R.mipmap.home_tab_btn_icon3,R.mipmap.home_tab_btn_icon4,R.mipmap.home_tab_btn_icon5};
+        for (int i = 0; i < Math.random() * 5; i++) {
+            list.add(new HomeTabInfo(tabNames[i], tabImages[i]));
         }
         mHomeFunctionAdapter = new HomeFunctionAdapter(list);
         mRecyclerFunction.setLayoutManager(new GridLayoutManager(this.getContext(), 5));
         mRecyclerFunction.setAdapter(mHomeFunctionAdapter);
 
-        List<GoodsInfo> recommendList = new ArrayList<>();
+        String[] bannerNames={"精选推荐","办信用卡","代还信用卡"};
+        int[] bannerImages={R.mipmap.home_banner1,R.mipmap.home_banner2,
+                R.mipmap.home_banner3};
+
+        List<HomeBannerInfo> homeBannerInfos = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            recommendList.add(new GoodsInfo());
+            homeBannerInfos.add(new HomeBannerInfo(""+i, bannerNames[i], bannerImages[i]));
         }
-        mHomeRecommendAdapter = new HomeRecommendAdapter(recommendList);
+
+        mHomeRecommendAdapter = new HomeRecommendAdapter(homeBannerInfos);
         mRecyclerRecommend.setLayoutManager(new LinearLayoutManager(this.getContext()));
         mRecyclerRecommend.setAdapter(mHomeRecommendAdapter);
         mRecyclerRecommend.setNestedScrollingEnabled(false);

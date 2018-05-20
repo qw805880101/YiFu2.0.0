@@ -7,6 +7,7 @@ import com.bypay.yifu.api.Api;
 import com.psylife.wrmvplibrary.RxManager;
 import com.psylife.wrmvplibrary.base.WRBaseLazyFragment;
 import com.psylife.wrmvplibrary.data.net.RxService;
+import com.psylife.wrmvplibrary.utils.StatusBarUtil;
 import com.psylife.wrmvplibrary.utils.ToastUtils;
 
 import rx.functions.Action1;
@@ -20,6 +21,11 @@ public abstract class BaseFragment extends WRBaseLazyFragment implements Action1
     public Api mXuanXingApi = RxService.createApi(Api.class);
 
     public RxManager mRxManager = new RxManager();
+
+    @Override
+    public void setStatusBarColor() {
+        StatusBarUtil.setTranslucent(this.getActivity());
+    }
 
     @Override
     public View getTitleView() {

@@ -15,19 +15,21 @@
         android:paddingTop="10dp">
 
         <TextView
+            android:id="@+id/txt_bannerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="精选推荐"
             android:textColor="@color/black"
             android:textSize="17sp" />
 
-        <TextView
+        <ImageView
+            android:id="@+id/image_home_banner"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="140dp"
             android:layout_marginTop="10dp"
-            android:background="#ee5342"
-            android:gravity="center"
-            android:text="banner" />
+            android:src="@mipmap/home_banner1"
+            android:scaleType="fitXY"
+            />
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

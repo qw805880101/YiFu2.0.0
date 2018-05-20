@@ -9,20 +9,27 @@
     android:paddingTop="10dp">
 
     <TextView
+        android:id="@+id/txt_home_goods_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/txt_color_2d2d2d"
         android:layout_marginTop="10dp"
         android:text="缓解湿疹牛皮癣" />
 
     <TextView
+        android:id="@+id/txt_home_goods_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
+        android:textColor="@color/txt_color_9c9c9c"
         android:text="￥ 99.99" />
 
     <ImageView
+        android:id="@+id/image_home_goods"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:src="@mipmap/ic_launcher" />
 
 
