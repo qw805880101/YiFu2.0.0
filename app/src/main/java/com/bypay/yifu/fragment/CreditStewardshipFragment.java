@@ -3,11 +3,12 @@ package com.bypay.yifu.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.bypay.yifu.R;
-import com.bypay.yifu.adapter.HomeGoodsAdapter_a;
+import com.bypay.yifu.adapter.CreditListAdapter;
 import com.bypay.yifu.adapter.ShoppingMallTabAdapter;
 import com.bypay.yifu.base.BaseFragment;
 import com.bypay.yifu.bean.HomeTabInfo;
@@ -20,8 +21,12 @@ import butterknife.BindView;
 public class CreditStewardshipFragment extends BaseFragment {
     @BindView(R.id.credit_stewardship_tab)
     RecyclerView mCreditStewardshipTab;
+    @BindView(R.id.credit_stewardship_list)
+    RecyclerView mCreditList;
+
 
     private ShoppingMallTabAdapter mShoppingMallTabAdapter;
+    private CreditListAdapter mCreditListAdapter;
 
     @Override
     protected void initLazyView() {
@@ -45,6 +50,11 @@ public class CreditStewardshipFragment extends BaseFragment {
         mShoppingMallTabAdapter = new ShoppingMallTabAdapter(list);
         mCreditStewardshipTab.setLayoutManager(new GridLayoutManager(this.getActivity(), 4));
         mCreditStewardshipTab.setAdapter(mShoppingMallTabAdapter);
+
+        mCreditListAdapter = new CreditListAdapter(list);
+        mCreditList.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        mCreditList.setAdapter(mCreditListAdapter);
+
     }
 
 }
