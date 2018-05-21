@@ -1,50 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="10dp"
-        android:background="#33ee33"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/menu_icon2_orange"
-            android:layout_marginRight="10dp"
-            />
-
-        <EditText
-            android:id="@+id/et_search"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="10dp"
-            android:imeOptions="actionSearch"
-            android:background="@drawable/bg_search"
-            android:layout_weight="1"
-            android:singleLine="true"
-            android:hint="在千万海外商品中搜索"
-            android:textSize="14sp"
-            android:textColorHint="#696966"
-            android:drawablePadding="5dp"
-            android:drawableLeft="@mipmap/icon_cb_02"
-            android:paddingRight="10dp"
-            android:drawableRight="@mipmap/ic_back"
-            />
+            android:layout_height="220dp">
 
-        <ImageView
+            <com.youth.banner.Banner
+                android:id="@+id/shopping_mall_banner"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                banner:indicator_height="5dp"
+                banner:indicator_width="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/nav_menu_icon_sort" />
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_search"
+                    android:drawableLeft="@mipmap/nav_menu_btn_search"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@mipmap/ic_back"
+                    android:hint="在千万海外商品中搜索"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/txt_color_2d2d2d"
+                    android:textColorHint="@color/txt_color_9c9c9c"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/nav_menu_icon_shopping_cart" />
+
+            </LinearLayout>
+
+            <!-- tab -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/mall_list_bg"
+                android:gravity="bottom"
+                android:paddingBottom="5dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/shopping_mall_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 分类 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <!-- 手机数码 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="手机数码"
+                    android:textColor="@color/txt_color_31c61d"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:text="买手甄选  极速发货"
+                    android:textColor="@color/txt_color_646464"
+                    android:textSize="13dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/mall_image_mobile_phones" />
+
+            </LinearLayout>
+
+            <!-- 电脑办公 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="电脑办公"
+                    android:textColor="@color/txt_color_33baf3"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:text="发现理想生活"
+                    android:textColor="@color/txt_color_646464"
+                    android:textSize="13dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:src="@mipmap/mall_image_computer_office" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- 分类2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <!-- 手机数码 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1.5dp"
+                android:layout_weight="1"
+                android:background="@color/bg_gray"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp">
+                    <!-- 家用电器 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="家用电器"
+                        android:textColor="@color/txt_color_ff8240"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:text="低价抢大牌"
+                        android:textColor="@color/txt_color_646464"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:src="@mipmap/mall_image_household_appliances" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="食品生鲜"
+                        android:textColor="@color/txt_color_ff191e"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:text="逛遍全球"
+                        android:textColor="@color/txt_color_646464"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:src="@mipmap/mall_image_snack_foods" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 电脑办公 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="美妆个护"
+                    android:textColor="@color/txt_color_ba53f8"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:text="优品大集合  带你逛不停"
+                    android:textColor="@color/txt_color_646464"
+                    android:textSize="13dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:src="@mipmap/mall_image_beauty_care" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/menu_icon2_orange"
-            android:layout_marginLeft="10dp"
-            />
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/mall_tab_icon_good_selection"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:text="好货精选"
+            android:textColor="@color/txt_color_1d1d1d"
+            android:textSize="15dp" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:src="@mipmap/mall_list_banner" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_mall_goods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/mall_tab_icon_good_selection"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:text="为你推荐"
+            android:textColor="@color/txt_color_1d1d1d"
+            android:textSize="15dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_mall_goods_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
-</LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

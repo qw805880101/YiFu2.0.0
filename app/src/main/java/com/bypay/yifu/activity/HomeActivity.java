@@ -11,6 +11,7 @@ import com.bypay.yifu.MyApplication;
 import com.bypay.yifu.R;
 import com.bypay.yifu.Utils.Utils;
 import com.bypay.yifu.base.BaseActivity;
+import com.bypay.yifu.fragment.CreditStewardshipFragment;
 import com.bypay.yifu.fragment.HomePageFragment;
 import com.bypay.yifu.fragment.ShopCartFragment;
 import com.bypay.yifu.fragment.ShoppingMallFragment;
@@ -35,10 +36,13 @@ public class HomeActivity extends BaseActivity implements OnClickListener, Botto
 
     private CustomFragmentTabHost mCustomFragmentTabHost;
 
-    private Class fragmentArray[] = {HomePageFragment.class, ShoppingMallFragment.class, ShopCartFragment.class, WebFragment.class, WebFragment.class};
+    private Class fragmentArray[] = {HomePageFragment.class, ShoppingMallFragment.class,
+            ShopCartFragment.class, CreditStewardshipFragment.class, WebFragment.class};
 
-    private int[] imageIds = {R.mipmap.menu_icon1_orange, R.mipmap.menu_icon1_orange,R.mipmap.menu_icon2_orange, R.mipmap.menu_icon3_orange, R.mipmap.menu_icon4_orange};
-    private int[] imageId = {R.mipmap.menu_icon1_gary, R.mipmap.menu_icon1_gary,R.mipmap.menu_icon2_gary, R.mipmap.menu_icon3_gary, R.mipmap.menu_icon4_gary};
+    private int[] imageIds = {R.mipmap.tab_bar_icon_home_pre, R.mipmap.tab_bar_icon_mall_pre,
+            R.mipmap.tab_bar_icon_credit_pre, R.mipmap.tab_bar_icon_bank_pre, R.mipmap.tab_bar_icon_me_pre};
+    private int[] imageId = {R.mipmap.tab_bar_icon_home, R.mipmap.tab_bar_icon_mall,
+            R.mipmap.tab_bar_icon_credit, R.mipmap.tab_bar_icon_bank, R.mipmap.tab_bar_icon_me};
 
 
     FragmentManager fragmentManager;
@@ -68,12 +72,11 @@ public class HomeActivity extends BaseActivity implements OnClickListener, Botto
         bottomTabBar.setTabBarBackgroundResource(R.color.back_ececed);
         bottomTabBar.setDividerColor(this.getResources().getColor(R.color.color_ccd0cf));
         mCustomFragmentTabHost = bottomTabBar.getTapHost();
-        String[] mTabs = {"首页", "商城", "分类", "购物车", "我的"};
+        String[] mTabs = {"首页", "商城", "信贷", "信用管家", "我的"};
         /*新建Tabspec选项卡并设置Tab菜单栏的内容和绑定对应的Fragment*/
         for (int i = 0; i < mTabs.length; i++) {
             bottomTabBar.addTabItem(mTabs[i], imageIds[i], imageId[i], fragmentArray[i]);
         }
-        setGoodNum();
 //        mCustomFragmentTabHost.getTabWidget().getChildTabViewAt(2).setOnClickListener(new OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -126,17 +129,9 @@ public class HomeActivity extends BaseActivity implements OnClickListener, Botto
     @Override
     protected void onRestart() {
         super.onRestart();
-        setGoodNum();
         if (mCustomFragmentTabHost.getCurrentTab() == 2) {
             Utils.getDataNum(this);
         }
-    }
-
-    /**
-     * 设置底部购物车显示数量
-     */
-    public void setGoodNum() {
-        bottomTabBar.setNum(MyApplication.GOODS_NUM);
     }
 
     // 用来计算返回键的点击间隔时间

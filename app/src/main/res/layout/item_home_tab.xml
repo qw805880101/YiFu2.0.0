@@ -21,7 +21,7 @@
         android:layout_marginTop="5dp"
         android:gravity="center_horizontal"
         android:text="我要开店"
-        android:textColor="@color/black"
-        android:textSize="13sp" />
+        android:textColor="@color/txt_color_1b1b1b"
+        android:textSize="13dp" />
 
 </LinearLayout>

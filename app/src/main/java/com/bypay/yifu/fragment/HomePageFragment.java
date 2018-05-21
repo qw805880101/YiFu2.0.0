@@ -5,18 +5,14 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bypay.yifu.R;
-import com.bypay.yifu.adapter.HomeFunctionAdapter;
+import com.bypay.yifu.adapter.HomeTabAdapter;
 import com.bypay.yifu.adapter.HomeRecommendAdapter;
 import com.bypay.yifu.base.BaseFragment;
-import com.bypay.yifu.bean.GoodsInfo;
 import com.bypay.yifu.bean.HomeBannerInfo;
-import com.bypay.yifu.bean.HomeGoodsInfo;
 import com.bypay.yifu.bean.HomeTabInfo;
 import com.psylife.wrmvplibrary.utils.TitleBuilder;
 
@@ -24,9 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 
 /**
@@ -49,7 +43,7 @@ public class HomePageFragment extends BaseFragment {
     @BindView(R.id.recycler_recommend)
     RecyclerView mRecyclerRecommend;
 
-    HomeFunctionAdapter mHomeFunctionAdapter;
+    HomeTabAdapter mHomeTabAdapter;
     HomeRecommendAdapter mHomeRecommendAdapter;
 
     @Override
@@ -74,9 +68,9 @@ public class HomePageFragment extends BaseFragment {
         for (int i = 0; i < Math.random() * 5; i++) {
             list.add(new HomeTabInfo(tabNames[i], tabImages[i]));
         }
-        mHomeFunctionAdapter = new HomeFunctionAdapter(list);
+        mHomeTabAdapter = new HomeTabAdapter(list);
         mRecyclerFunction.setLayoutManager(new GridLayoutManager(this.getContext(), 5));
-        mRecyclerFunction.setAdapter(mHomeFunctionAdapter);
+        mRecyclerFunction.setAdapter(mHomeTabAdapter);
 
         String[] bannerNames={"精选推荐","办信用卡","代还信用卡"};
         int[] bannerImages={R.mipmap.home_banner1,R.mipmap.home_banner2,

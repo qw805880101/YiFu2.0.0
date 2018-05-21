@@ -290,7 +290,6 @@ public class ShopCartFragment extends BaseFragment implements OnClickListener, S
         isChose.put(pos, isChecked);
         mTxtAmt.setText("合计：" + allAmt);
         Utils.getDataNum(this.getContext());
-        ((HomeActivity) this.getActivity()).setGoodNum();
         if (allNum == list.size()) {
             mCheckBox.setChecked(true);
         }
@@ -303,7 +302,6 @@ public class ShopCartFragment extends BaseFragment implements OnClickListener, S
      */
     private void setGoodsNum(int a) {
         MyApplication.GOODS_NUM += a;
-        ((HomeActivity) this.getActivity()).setGoodNum();
     }
 
     /**
@@ -374,7 +372,6 @@ public class ShopCartFragment extends BaseFragment implements OnClickListener, S
         allAmt = 0;
         mCheckBox.setChecked(false);
         mTxtAmt.setText("0.00");
-        ((HomeActivity) this.getActivity()).setGoodNum();
         cursor = dbManager.queryAndShow(MyApplication.MER_ID);
         while (cursor.moveToNext()) {
             GoodsInfo goodsInfo = new GoodsInfo();

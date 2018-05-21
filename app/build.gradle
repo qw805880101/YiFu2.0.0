@@ -54,6 +54,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.github.anzaizai:EasySwipeMenuLayout:1.1.2'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.37'
+
     //极光推送
     compile 'cn.jiguang.sdk:jpush:3.1.1'
     compile 'cn.jiguang.sdk:jcore:1.1.9'
@@ -62,4 +63,6 @@ dependencies {
     compile project(':bottomtabbar')
     //版本更新
     compile project(':UpdateAppUtils')
+    //banner
+    compile project(':banner')
 }
