@@ -50,7 +50,9 @@ public class HomePageFragment extends BaseFragment {
     public View getTitleView() {
         return new TitleBuilder(this.getActivity())
                 .setTitleText("伊藤嘉商城")
+                .setTitleTextColor(this.getContext(), R.color.white)
                 .setRightImage(R.mipmap.icon_cb_01)
+                .setTitleBgRes(R.color.txt_color_ec6c4e)
                 .build();
     }
 

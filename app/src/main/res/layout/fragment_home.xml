@@ -15,7 +15,8 @@
             android:background="@color/white"
             android:orientation="vertical"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp">
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
 
             <!-- 顶部4个按钮 -->
             <LinearLayout

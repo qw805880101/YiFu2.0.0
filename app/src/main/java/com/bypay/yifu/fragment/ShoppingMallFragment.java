@@ -1,14 +1,19 @@
 package com.bypay.yifu.fragment;
 
+import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnScrollChangeListener;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.bypay.yifu.R;
 import com.bypay.yifu.Utils.GlideImageLoader;
@@ -19,6 +24,7 @@ import com.bypay.yifu.base.BaseFragment;
 import com.bypay.yifu.bean.HomeGoodsInfo;
 import com.bypay.yifu.bean.HomeTabInfo;
 import com.bypay.yifu.view.InterestSpaceItemDecorationList;
+import com.psylife.wrmvplibrary.utils.LogUtil;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 
@@ -38,6 +44,10 @@ import butterknife.Unbinder;
 
 public class ShoppingMallFragment extends BaseFragment {
 
+    @BindView(R.id.shopping_scrollview)
+    NestedScrollView mNestedScrollView;
+    @BindView(R.id.lin_shopping_title)
+    LinearLayout mLinTitle;
     @BindView(R.id.shopping_mall_banner)
     Banner mShoppingMallBanner;
     @BindView(R.id.et_search)
@@ -60,6 +70,7 @@ public class ShoppingMallFragment extends BaseFragment {
         return R.layout.fragment_shoppingmall;
     }
 
+    @RequiresApi(api = VERSION_CODES.M)
     @Override
     public void initUI(View view, @Nullable Bundle savedInstanceState) {
         //设置图片加载器
@@ -108,6 +119,18 @@ public class ShoppingMallFragment extends BaseFragment {
         mRecyclerMallGoodsList.addItemDecoration(new InterestSpaceItemDecorationList(mContext.getResources().getDimensionPixelSize(R.dimen.bottom_1), 4));
         mRecyclerMallGoodsList.setAdapter(mShoppingMallGoodsListAdapter);
         mRecyclerMallGoodsList.setNestedScrollingEnabled(false);
+
+        mLinTitle.getBackground().setAlpha(0);
+        mNestedScrollView.setOnScrollChangeListener(new OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if ((mShoppingMallBanner.getHeight() / 255 * scrollY) >= 255) {
+                    mLinTitle.getBackground().setAlpha(255);
+                } else {
+                    mLinTitle.getBackground().setAlpha(mShoppingMallBanner.getHeight() / 255 * scrollY);
+                }
+            }
+        });
     }
 
     @Override

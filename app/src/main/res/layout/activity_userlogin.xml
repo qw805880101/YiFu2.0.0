@@ -23,7 +23,7 @@
             android:id="@+id/account_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white_ffffff"
+            android:background="@color/white"
             android:digits="1234567890"
             android:drawableLeft="@mipmap/login_icon_phone"
             android:drawablePadding="10dp"
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/white_ffffff"
+            android:background="@color/white"
             android:drawableLeft="@mipmap/login_icon_pw"
             android:drawablePadding="10dp"
             android:hint="@string/input_account_pwd"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/login_but"
             android:text="@string/login"
-            android:textColor="@color/white_ffffff"
+            android:textColor="@color/white"
             android:textSize="20dp" />
 
         <LinearLayout

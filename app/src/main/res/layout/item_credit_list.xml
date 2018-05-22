@@ -1,144 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
     android:background="@drawable/bg_credit"
-    android:padding="15dp"
-    >
+    android:orientation="vertical"
+    android:padding="15dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="建行信用卡"
-            android:textColor="@color/black"
-            android:drawablePadding="5dp"
-            android:drawableLeft="@mipmap/list_bank_icon"
-            android:layout_weight="1"
-            android:textSize="15dp"
-            />
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/list_bank_icon"
+            android:drawablePadding="5dp"
+            android:text="建行信用卡"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
             android:text="1天前更新"
             android:textColor="@color/txt_color_a6a6a6"
-            android:drawablePadding="5dp"
-            android:textSize="14dp"
-            />
+            android:textSize="14dp" />
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/txt_color_f3f3f3"
-        />
+        android:background="@color/txt_color_f3f3f3" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:drawablePadding="5dp"
         android:text="今天出账"
         android:textColor="@color/black"
-        android:layout_marginTop="25dp"
-        android:drawablePadding="5dp"
-        android:layout_weight="1"
-        android:textSize="20dp"
-        />
+        android:textSize="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
                 android:text="1,000.00"
                 android:textColor="@color/txt_color_757575"
-                android:drawablePadding="5dp"
-                android:textSize="15dp"
-                />
+                android:textSize="15dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:drawablePadding="5dp"
                 android:text="本期剩余应还"
                 android:textColor="@color/txt_color_a6a6a6"
-                android:drawablePadding="5dp"
-                android:textSize="12dp"
-                />
+                android:textSize="12dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_weight="1"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
                 android:text="999,199,000.00"
                 android:textColor="@color/txt_color_757575"
-                android:drawablePadding="5dp"
-                android:textSize="15dp"
-                />
+                android:textSize="15dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:drawablePadding="5dp"
                 android:text="剩余额度"
                 android:textColor="@color/txt_color_a6a6a6"
-                android:drawablePadding="5dp"
-                android:textSize="12dp"
-                />
+                android:textSize="12dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
                 android:text="50天"
                 android:textColor="@color/txt_color_757575"
-                android:drawablePadding="5dp"
-                android:textSize="15dp"
-                />
+                android:textSize="15dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:drawablePadding="5dp"
                 android:text="免息期"
                 android:textColor="@color/txt_color_a6a6a6"
-                android:drawablePadding="5dp"
-                android:textSize="12dp"
-                />
+                android:textSize="12dp" />
 
         </LinearLayout>
-
 
 
     </LinearLayout>

@@ -1,14 +1,20 @@
 package com.bypay.yifu.fragment;
 
+import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.View.OnScrollChangeListener;
+import android.widget.LinearLayout;
 
 import com.bypay.yifu.R;
 import com.bypay.yifu.adapter.CreditListAdapter;
+import com.bypay.yifu.adapter.CreditTabAdapter;
 import com.bypay.yifu.adapter.ShoppingMallTabAdapter;
 import com.bypay.yifu.base.BaseFragment;
 import com.bypay.yifu.bean.HomeTabInfo;
@@ -19,13 +25,20 @@ import java.util.List;
 import butterknife.BindView;
 
 public class CreditStewardshipFragment extends BaseFragment {
+
+    @BindView(R.id.credit_scrollview)
+    NestedScrollView mNestedScrollView;
+    @BindView(R.id.lin_banner)
+    LinearLayout mLinBanner;
+    @BindView(R.id.lin_credit_title)
+    LinearLayout mCreditTitle;
     @BindView(R.id.credit_stewardship_tab)
     RecyclerView mCreditStewardshipTab;
     @BindView(R.id.credit_stewardship_list)
     RecyclerView mCreditList;
 
 
-    private ShoppingMallTabAdapter mShoppingMallTabAdapter;
+    private CreditTabAdapter mCreditTabAdapter;
     private CreditListAdapter mCreditListAdapter;
 
     @Override
@@ -38,6 +51,7 @@ public class CreditStewardshipFragment extends BaseFragment {
         return R.layout.fragment_credit_stewardship;
     }
 
+    @RequiresApi(api = VERSION_CODES.M)
     @Override
     public void initUI(View view, @Nullable Bundle savedInstanceState) {
         List<HomeTabInfo> list = new ArrayList<>();
@@ -47,13 +61,26 @@ public class CreditStewardshipFragment extends BaseFragment {
         for (int i = 0; i < 4; i++) {
             list.add(new HomeTabInfo(tabNames[i], tabImages[i]));
         }
-        mShoppingMallTabAdapter = new ShoppingMallTabAdapter(list);
+        mCreditTabAdapter = new CreditTabAdapter(list);
         mCreditStewardshipTab.setLayoutManager(new GridLayoutManager(this.getActivity(), 4));
-        mCreditStewardshipTab.setAdapter(mShoppingMallTabAdapter);
+        mCreditStewardshipTab.setAdapter(mCreditTabAdapter);
 
         mCreditListAdapter = new CreditListAdapter(list);
         mCreditList.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         mCreditList.setAdapter(mCreditListAdapter);
+        mCreditList.setNestedScrollingEnabled(false);
+
+        mCreditTitle.getBackground().setAlpha(0);
+        mNestedScrollView.setOnScrollChangeListener(new OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if ((mLinBanner.getHeight() / 255 * scrollY) >= 255) {
+                    mCreditTitle.getBackground().setAlpha(255);
+                } else {
+                    mCreditTitle.getBackground().setAlpha(mLinBanner.getHeight() / 255 * scrollY);
+                }
+            }
+        });
 
     }
 

@@ -9,7 +9,7 @@
 
     <color name="tx_e83545">#e83545</color>
 
-    <color name="white_ffffff">#ffffff</color>
+    <color name="white_ffffffff">#ffffffff</color>
 
     <color name="color_a8abb3">#a8abb3</color>
 
@@ -54,4 +54,24 @@
     <color name="txt_color_757575">#757575</color>
 
     <color name="txt_color_f3f3f3">#f3f3f3</color>
+
+    <color name="txt_color_232323">#232323</color>
+
+    <color name="txt_color_b3b4b5">#b3b4b5</color>
+
+    <color name="txt_color_fcf2be">#fcf2be</color>
+
+    <color name="txt_color_5a5a5a">#5a5a5a</color>
+
+    <color name="txt_color_fc5f58">#fc5f58</color>
+
+    <color name="txt_color_666666">#666666</color>
+
+    <color name="txt_color_999999">#999999</color>
+
+    <color name="txt_color_6f6f6f">#6f6f6f</color>
+
+    <color name="txt_color_fefefe">#fefefe</color>
+
+    <color name="txt_color_ec6c4e">#ec6c4e</color>
 </resources>

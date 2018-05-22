@@ -13,9 +13,11 @@ import com.bypay.yifu.Utils.Utils;
 import com.bypay.yifu.base.BaseActivity;
 import com.bypay.yifu.fragment.CreditStewardshipFragment;
 import com.bypay.yifu.fragment.HomePageFragment;
+import com.bypay.yifu.fragment.MyFragment;
 import com.bypay.yifu.fragment.ShopCartFragment;
 import com.bypay.yifu.fragment.ShoppingMallFragment;
 import com.bypay.yifu.fragment.WebFragment;
+import com.psylife.wrmvplibrary.utils.LogUtil;
 import com.psylife.wrmvplibrary.utils.StatusBarUtil;
 import com.psylife.wrmvplibrary.utils.ToastUtils;
 import com.xuanxing.tc.bottomtabbar.BottomTabBar;
@@ -37,7 +39,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener, Botto
     private CustomFragmentTabHost mCustomFragmentTabHost;
 
     private Class fragmentArray[] = {HomePageFragment.class, ShoppingMallFragment.class,
-            ShopCartFragment.class, CreditStewardshipFragment.class, WebFragment.class};
+            ShopCartFragment.class, CreditStewardshipFragment.class, MyFragment.class};
 
     private int[] imageIds = {R.mipmap.tab_bar_icon_home_pre, R.mipmap.tab_bar_icon_mall_pre,
             R.mipmap.tab_bar_icon_credit_pre, R.mipmap.tab_bar_icon_bank_pre, R.mipmap.tab_bar_icon_me_pre};
@@ -48,7 +50,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener, Botto
     FragmentManager fragmentManager;
 
     public void setStatusBarColor() {
-        StatusBarUtil.setColor(this, this.getResources().getColor(R.color.color_a8abb3));
+        StatusBarUtil.setColor(this, this.getResources().getColor(R.color.txt_color_ec6c4e));
     }
 
     @Override
@@ -103,10 +105,13 @@ public class HomeActivity extends BaseActivity implements OnClickListener, Botto
 
     @Override
     public void onTabChange(int position, String name) {
+        StatusBarUtil.setColor(this, this.getResources().getColor(R.color.txt_color_ec6c4e));
         switch (position) {
             case 0:
                 break;
             case 1:
+                LogUtil.d("商城");
+                StatusBarUtil.setTransparent(this);
                 break;
             case 3:
                 break;
