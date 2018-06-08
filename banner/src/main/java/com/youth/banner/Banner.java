@@ -45,8 +45,8 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
     private int scrollTime = BannerConfig.DURATION;
     private boolean isAutoPlay = BannerConfig.IS_AUTO_PLAY;
     private boolean isScroll = BannerConfig.IS_SCROLL;
-    private int mIndicatorSelectedResId = R.drawable.gray_radius;
-    private int mIndicatorUnselectedResId = R.drawable.white_radius;
+    private int mIndicatorSelectedResId = R.drawable.mall_banner_slide;
+    private int mIndicatorUnselectedResId = R.drawable.mall_banner_slide_pre;
     private int mLayoutResId = R.layout.banner;
     private int titleHeight;
     private int titleBackground;

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/bg_gray">
 
-    <android.support.v4.widget.NestedScrollView
+    <com.bypay.yifu.view.SpringScrollView
         android:id="@+id/shopping_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -292,7 +292,7 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </com.bypay.yifu.view.SpringScrollView>
 
     <LinearLayout
         android:id="@+id/lin_shopping_title"
@@ -301,12 +301,13 @@
         android:background="@color/txt_color_ec6c4e"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="15dp">
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="center"
             android:src="@mipmap/nav_menu_icon_sort" />
 
         <EditText
@@ -328,9 +329,9 @@
             android:textSize="14sp" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="center"
             android:src="@mipmap/nav_menu_icon_shopping_cart" />
 
     </LinearLayout>

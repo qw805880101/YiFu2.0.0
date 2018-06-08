@@ -31,7 +31,8 @@ public class AddBankCardActivity extends BaseActivity {
     @Override
     public View getTitleView() {
         return new TitleBuilder(this)
-                .setLeftImage(R.mipmap.nav_menu_btn)
+                .setLeftImage(R.drawable.bt_selector_nav_menu)
+                .setTitleBgRes(R.color.txt_color_f7f7f7)
                 .setTitleText("添加结算卡")
                 .setRightText("支持银行")
                 .setRightTextColor(this, R.color.txt_color_6f6f6f)

@@ -5,6 +5,13 @@
     android:background="@color/bg_gray"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="刷新啦~~~~"
+        android:textSize="20dp" />
+
     <ScrollView
         android:id="@+id/my_scrollview"
         android:layout_width="match_parent"
@@ -18,16 +25,16 @@
             <LinearLayout
                 android:id="@+id/lin_my_bg"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:background="@mipmap/me_bg_pic"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="80dp"
+                    android:layout_marginTop="60dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -440,16 +447,16 @@
         android:id="@+id/lin_my_title"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/txt_color_ec6c4e"
+        android:background="@mipmap/nav_menu_bg_pic"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="-15dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
             android:scaleType="center"
-            android:src="@mipmap/nav_menu_btn_arrow" />
+            android:src="@mipmap/nav_menu_btn_w" />
 
         <TextView
             android:layout_width="match_parent"

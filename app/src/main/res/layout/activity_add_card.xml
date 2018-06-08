@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:background="@null"
             android:hint="输入银行卡号"
-            android:textColor="@color/txt_color_b3b4b5"
+            android:textColor="@color/txt_color_232323"
             android:textSize="15dp" />
 
     </LinearLayout>
@@ -64,7 +64,7 @@
             android:layout_height="match_parent"
             android:background="@null"
             android:hint="银行预留手机号码"
-            android:textColor="@color/txt_color_b3b4b5"
+            android:textColor="@color/txt_color_232323"
             android:textSize="15dp" />
 
     </LinearLayout>
@@ -93,7 +93,7 @@
             android:layout_weight="1"
             android:background="@null"
             android:hint="请输入短信验证码"
-            android:textColor="@color/txt_color_b3b4b5"
+            android:textColor="@color/txt_color_232323"
             android:textSize="15dp" />
 
         <Button
@@ -111,12 +111,12 @@
     <Button
         android:id="@+id/bt_add_card_next"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginBottom="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="20dp"
-        android:background="@mipmap/btn_submit"
+        android:background="@drawable/bt_selector_1"
         android:text="下一步"
         android:textColor="@color/txt_color_fc5f58"
         android:textSize="17dp" />

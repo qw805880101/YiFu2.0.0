@@ -4,16 +4,26 @@ import java.util.List;
 
 public class HomeBannerInfo {
 
+    private int type;
     private String bannerName;
     private String bannerUrl;
     private String bannerType;
     private int bannerImage;
     private List<HomeGoodsInfo> homeGoodsInfos;
 
-    public HomeBannerInfo(String bannerType, String bannerName, int bannerImage) {
+    public HomeBannerInfo(String bannerType, String bannerName, int bannerImage, int type) {
         this.bannerType = bannerType;
         this.bannerName = bannerName;
         this.bannerImage = bannerImage;
+        this.type = type;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getBannerType() {

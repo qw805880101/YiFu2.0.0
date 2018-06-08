@@ -68,6 +68,14 @@
             android:name=".activity.RealIdCardActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.AddressListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AddressManageActivity"
+            android:screenOrientation="portrait" />
+
         <service
             android:name="cn.jpush.android.service.PushService"
             android:process=":multiprocess"

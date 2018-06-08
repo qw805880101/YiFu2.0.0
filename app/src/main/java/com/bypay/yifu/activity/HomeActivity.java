@@ -7,7 +7,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.bypay.yifu.MyApplication;
 import com.bypay.yifu.R;
 import com.bypay.yifu.Utils.Utils;
 import com.bypay.yifu.base.BaseActivity;
@@ -16,7 +15,6 @@ import com.bypay.yifu.fragment.HomePageFragment;
 import com.bypay.yifu.fragment.MyFragment;
 import com.bypay.yifu.fragment.ShopCartFragment;
 import com.bypay.yifu.fragment.ShoppingMallFragment;
-import com.bypay.yifu.fragment.WebFragment;
 import com.psylife.wrmvplibrary.utils.LogUtil;
 import com.psylife.wrmvplibrary.utils.StatusBarUtil;
 import com.psylife.wrmvplibrary.utils.ToastUtils;
@@ -105,17 +103,17 @@ public class HomeActivity extends BaseActivity implements OnClickListener, Botto
 
     @Override
     public void onTabChange(int position, String name) {
-        StatusBarUtil.setColor(this, this.getResources().getColor(R.color.txt_color_ec6c4e));
-        switch (position) {
-            case 0:
-                break;
-            case 1:
-                LogUtil.d("商城");
-                StatusBarUtil.setTransparent(this);
-                break;
-            case 3:
-                break;
-        }
+//        StatusBarUtil.setColor(this, this.getResources().getColor(R.color.txt_color_ec6c4e));
+//        switch (position) {
+//            case 0:
+//                break;
+//            case 1:
+//                LogUtil.d("商城");
+//                StatusBarUtil.setTransparent(this);
+//                break;
+//            case 3:
+//                break;
+//        }
     }
 
     @Override

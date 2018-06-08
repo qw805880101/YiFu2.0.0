@@ -1,108 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_gray">
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/lin_my_title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="10dp">
-
-            <!-- 顶部4个按钮 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@mipmap/home_image_bg"
-                android:orientation="horizontal"
-                android:paddingBottom="30dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingTop="30dp">
-
-                <TextView
-                    android:id="@+id/txt_scan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawablePadding="5dp"
-                    android:drawableTop="@mipmap/home_icon_scan"
-                    android:gravity="center_horizontal"
-                    android:text="扫一扫"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/txt_payment_code"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawablePadding="5dp"
-                    android:drawableTop="@mipmap/home_icon_payment_code"
-                    android:gravity="center_horizontal"
-                    android:text="付款码"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/txt_reserve_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawablePadding="5dp"
-                    android:drawableTop="@mipmap/home_icon_politeinvitation"
-                    android:gravity="center_horizontal"
-                    android:text="邀请有礼"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/txt_reserve_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawablePadding="5dp"
-                    android:drawableTop="@mipmap/home_icon_shop"
-                    android:gravity="center_horizontal"
-                    android:text="我要开店"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-            <!-- 动态加载功能按钮 -->
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_function"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
-
-        </LinearLayout>
-
-
-        <!-- 动态加载推荐 -->
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_recommend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        android:layout_height="60dp"
+        android:background="@color/txt_color_ec6c4e"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
             android:gravity="center"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="----------我是有底线的----------" />
-    </LinearLayout>
+            android:text="伊藤嘉商城"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
 
-</android.support.v4.widget.NestedScrollView>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/nav_menu_btn_news" />
+
+    </RelativeLayout>
+
+    <com.bypay.yifu.view.SpringScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <!-- 顶部4个按钮 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/home_image_bg"
+                    android:orientation="horizontal"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/txt_scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/home_icon_scan"
+                        android:gravity="center_horizontal"
+                        android:text="扫一扫"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txt_payment_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/home_icon_payment_code"
+                        android:gravity="center_horizontal"
+                        android:text="付款码"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txt_reserve_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/home_icon_politeinvitation"
+                        android:gravity="center_horizontal"
+                        android:text="邀请有礼"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txt_reserve_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@mipmap/home_icon_shop"
+                        android:gravity="center_horizontal"
+                        android:text="我要开店"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <!-- 动态加载功能按钮 -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_function"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" />
+
+            </LinearLayout>
+
+
+            <!-- 动态加载推荐 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="----------我是有底线的----------" />
+        </LinearLayout>
+
+    </com.bypay.yifu.view.SpringScrollView>
+
+</LinearLayout>

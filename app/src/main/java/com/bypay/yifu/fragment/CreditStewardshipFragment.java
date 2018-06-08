@@ -4,20 +4,20 @@ import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.View.OnScrollChangeListener;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.bypay.yifu.R;
 import com.bypay.yifu.adapter.CreditListAdapter;
 import com.bypay.yifu.adapter.CreditTabAdapter;
-import com.bypay.yifu.adapter.ShoppingMallTabAdapter;
 import com.bypay.yifu.base.BaseFragment;
 import com.bypay.yifu.bean.HomeTabInfo;
+import com.bypay.yifu.view.SpringScrollView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,11 +27,11 @@ import butterknife.BindView;
 public class CreditStewardshipFragment extends BaseFragment {
 
     @BindView(R.id.credit_scrollview)
-    NestedScrollView mNestedScrollView;
+    SpringScrollView mNestedScrollView;
     @BindView(R.id.lin_banner)
     LinearLayout mLinBanner;
     @BindView(R.id.lin_credit_title)
-    LinearLayout mCreditTitle;
+    RelativeLayout mCreditTitle;
     @BindView(R.id.credit_stewardship_tab)
     RecyclerView mCreditStewardshipTab;
     @BindView(R.id.credit_stewardship_list)

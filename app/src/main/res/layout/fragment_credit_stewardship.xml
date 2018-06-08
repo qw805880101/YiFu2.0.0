@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/bg_gray">
 
-    <android.support.v4.widget.NestedScrollView
+    <com.bypay.yifu.view.SpringScrollView
         android:id="@+id/credit_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -96,19 +96,19 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginTop="10dp"
-                android:background="@mipmap/btn_add_account"
+                android:background="@drawable/bt_selector_2"
                 android:text="添加账单"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </com.bypay.yifu.view.SpringScrollView>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/lin_credit_title"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/txt_color_ec6c4e"
+        android:background="@mipmap/nav_menu_list_bg"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="15dp">
@@ -117,7 +117,7 @@
             android:id="@+id/et_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_centerInParent="true"
             android:gravity="center"
             android:text="信用管家"
             android:textColor="@color/white"
@@ -125,9 +125,10 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
             android:layout_marginLeft="10dp"
             android:src="@mipmap/nav_menu_btn_add" />
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

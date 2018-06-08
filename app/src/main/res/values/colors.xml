@@ -74,4 +74,12 @@
     <color name="txt_color_fefefe">#fefefe</color>
 
     <color name="txt_color_ec6c4e">#ec6c4e</color>
+
+    <color name="txt_color_222222">#222222</color>
+
+    <color name="txt_color_4f4f4f">#4f4f4f</color>
+
+    <color name="txt_color_ff5f59">#ff5f59</color>
+
+    <color name="txt_color_f7f7f7">#f7f7f7</color>
 </resources>

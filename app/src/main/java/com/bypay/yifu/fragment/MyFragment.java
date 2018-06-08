@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.bypay.yifu.R;
 import com.bypay.yifu.activity.AddBankCardActivity;
+import com.bypay.yifu.activity.AddressListActivity;
+import com.bypay.yifu.activity.AddressManageActivity;
 import com.bypay.yifu.activity.OpenShopActivity;
 import com.bypay.yifu.activity.RealNameAuthActivity;
 import com.bypay.yifu.base.BaseFragment;
@@ -75,15 +77,20 @@ public class MyFragment extends BaseFragment {
     @RequiresApi(api = VERSION_CODES.M)
     @Override
     public void initUI(View view, @Nullable Bundle savedInstanceState) {
-
         mLinMyTitle.getBackground().setAlpha(0);
         mMyScrollview.setOnScrollChangeListener(new OnScrollChangeListener() {
             @Override
             public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                if ((mLinMyBg.getHeight() / 255 * scrollY) >= 255 || scrollY < 0) {
+                if ((mLinMyBg.getHeight() / 255 * scrollY) >= 255) {
                     mLinMyTitle.getBackground().setAlpha(255);
                 } else {
                     mLinMyTitle.getBackground().setAlpha(mLinMyBg.getHeight() / 255 * scrollY);
+                }
+                if (scrollY < 0) {
+                    mLinMyTitle.setAlpha(0); //刷新界面
+                }
+                if (scrollY >= 0) {
+                    mLinMyTitle.setAlpha(1); //刷新界面
                 }
             }
         });
@@ -125,6 +132,8 @@ public class MyFragment extends BaseFragment {
                 this.getActivity().startActivity(intent);
                 break;
             case R.id.lin_address:
+                intent.setClass(this.getActivity(), AddressManageActivity.class);
+                this.getActivity().startActivity(intent);
                 break;
             case R.id.lin_set:
                 break;

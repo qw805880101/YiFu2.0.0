@@ -35,7 +35,7 @@
                 android:layout_height="match_parent"
                 android:background="@null"
                 android:hint="请输入店铺名称"
-                android:textColor="@color/txt_color_b3b4b5"
+                android:textColor="@color/txt_color_232323"
                 android:textSize="15dp" />
 
         </LinearLayout>
@@ -65,8 +65,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@null"
-                android:hint="银行预留手机号码"
-                android:textColor="@color/txt_color_b3b4b5"
+                android:textColor="@color/txt_color_232323"
                 android:textSize="15dp"
                 android:visibility="invisible" />
 
@@ -112,7 +111,7 @@
                 android:background="@null"
                 android:gravity="top"
                 android:hint="请输入详细地址"
-                android:textColor="@color/txt_color_b3b4b5"
+                android:textColor="@color/txt_color_232323"
                 android:textSize="15dp" />
         </LinearLayout>
 
@@ -141,7 +140,7 @@
                 android:layout_height="match_parent"
                 android:background="@null"
                 android:hint="请输入邮箱"
-                android:textColor="@color/txt_color_b3b4b5"
+                android:textColor="@color/txt_color_232323"
                 android:textSize="15dp" />
 
         </LinearLayout>
@@ -170,7 +169,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@null"
-                android:textColor="@color/txt_color_b3b4b5"
+                android:textColor="@color/txt_color_232323"
                 android:textSize="15dp"
                 android:visibility="invisible" />
 
@@ -211,7 +210,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@null"
-                android:textColor="@color/txt_color_b3b4b5"
+                android:textColor="@color/txt_color_232323"
                 android:textSize="15dp"
                 android:visibility="invisible" />
 
@@ -252,7 +251,7 @@
                 android:layout_weight="1"
                 android:background="@null"
                 android:hint="银行预留手机号码"
-                android:textColor="@color/txt_color_b3b4b5"
+                android:textColor="@color/txt_color_232323"
                 android:textSize="15dp"
                 android:visibility="invisible" />
 
@@ -294,7 +293,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@null"
-                android:textColor="@color/txt_color_b3b4b5"
+                android:textColor="@color/txt_color_232323"
                 android:textSize="15dp"
                 android:visibility="invisible" />
 
@@ -315,12 +314,12 @@
         <Button
             android:id="@+id/bt_shop_next"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginBottom="80dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginTop="20dp"
-            android:background="@mipmap/btn_submit"
+            android:background="@drawable/bt_selector_1"
             android:text="下一步"
             android:textColor="@color/txt_color_fc5f58"
             android:textSize="17dp" />

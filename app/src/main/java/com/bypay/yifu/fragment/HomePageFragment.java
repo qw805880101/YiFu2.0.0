@@ -18,6 +18,7 @@ import com.psylife.wrmvplibrary.utils.TitleBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -48,12 +49,7 @@ public class HomePageFragment extends BaseFragment {
 
     @Override
     public View getTitleView() {
-        return new TitleBuilder(this.getActivity())
-                .setTitleText("伊藤嘉商城")
-                .setTitleTextColor(this.getContext(), R.color.white)
-                .setRightImage(R.mipmap.icon_cb_01)
-                .setTitleBgRes(R.color.txt_color_ec6c4e)
-                .build();
+        return null;
     }
 
     @Override
@@ -64,9 +60,9 @@ public class HomePageFragment extends BaseFragment {
     @Override
     public void initUI(View view, @Nullable Bundle savedInstanceState) {
         List<HomeTabInfo> list = new ArrayList<>();
-        String[] tabNames={"代还信用卡","手机数码","电脑办公","家用电器","办信用卡"};
-        int[] tabImages={R.mipmap.home_tab_btn_icon1,R.mipmap.home_tab_btn_icon2,
-                R.mipmap.home_tab_btn_icon3,R.mipmap.home_tab_btn_icon4,R.mipmap.home_tab_btn_icon5};
+        String[] tabNames = {"代还信用卡", "手机数码", "电脑办公", "家用电器", "办信用卡"};
+        int[] tabImages = {R.mipmap.home_tab_btn_icon1, R.mipmap.home_tab_btn_icon2,
+                R.mipmap.home_tab_btn_icon3, R.mipmap.home_tab_btn_icon4, R.mipmap.home_tab_btn_icon5};
         for (int i = 0; i < Math.random() * 5; i++) {
             list.add(new HomeTabInfo(tabNames[i], tabImages[i]));
         }
@@ -74,13 +70,14 @@ public class HomePageFragment extends BaseFragment {
         mRecyclerFunction.setLayoutManager(new GridLayoutManager(this.getContext(), 5));
         mRecyclerFunction.setAdapter(mHomeTabAdapter);
 
-        String[] bannerNames={"精选推荐","办信用卡","代还信用卡"};
-        int[] bannerImages={R.mipmap.home_banner1,R.mipmap.home_banner2,
-                R.mipmap.home_banner3};
+        String[] bannerNames = {"精选推荐", "办信用卡", "代还信用卡", "测试用的", "123"};
+        int[] bannerImages = {R.mipmap.home_banner1, R.mipmap.home_banner1, R.mipmap.home_banner2,
+                R.mipmap.home_banner3, R.mipmap.home_banner3};
 
+        Random rand = new Random();
         List<HomeBannerInfo> homeBannerInfos = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            homeBannerInfos.add(new HomeBannerInfo(""+i, bannerNames[i], bannerImages[i]));
+        for (int i = 0; i < 5; i++) {
+            homeBannerInfos.add(new HomeBannerInfo("" + i, bannerNames[i], bannerImages[i], rand.nextInt(3)));
         }
 
         mHomeRecommendAdapter = new HomeRecommendAdapter(homeBannerInfos);

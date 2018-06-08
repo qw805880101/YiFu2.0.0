@@ -4,7 +4,8 @@
     <attr format="color|reference" name="widgetBackground"/>
     <attr format="color|reference" name="widgetBackgroundDark"/>
     <attr format="color|reference" name="widgetBackgroundTitle"/>
-    <color name="bg_gray">#f1f1f1</color>
+    <color name="bg_gray">#f0f2f5</color>
+    <color name="bg_gray_f1">#f1f1f1</color>
     <color name="bg_gray_pressed">#e8e8e8</color>
     <color name="bg_position_bar_down">#1A8BC34A</color>
     <color name="bg_position_bar_up">#0D8BC34A</color>

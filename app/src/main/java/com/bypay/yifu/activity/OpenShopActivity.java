@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.bypay.yifu.R;
 import com.bypay.yifu.base.BaseActivity;
+import com.psylife.wrmvplibrary.utils.TitleBuilder;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,6 +43,15 @@ public class OpenShopActivity extends BaseActivity {
     TextView mTxtShopWhenSelect;//是否有门店选择
     @BindView(R.id.bt_shop_next)
     Button mBtShopNext;//下一步
+
+    @Override
+    public View getTitleView() {
+        return new TitleBuilder(this)
+                .setLeftImage(R.drawable.bt_selector_nav_menu)
+                .setTitleText("开店")
+                .setTitleBgRes(R.color.txt_color_f7f7f7)
+                .build();
+    }
 
     @Override
     public int getLayoutId() {

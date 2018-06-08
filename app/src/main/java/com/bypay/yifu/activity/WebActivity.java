@@ -60,7 +60,7 @@ public class WebActivity extends BaseActivity implements Take {
     private YiFuToJs mYiFuToJs;
 
     public void setStatusBarColor() {
-        StatusBarUtil.setColor(this, this.getResources().getColor(R.color.color_a8abb3));
+        StatusBarUtil.setColor(this, this.getResources().getColor(R.color.txt_color_f7f7f7));
     }
 
     @Override

@@ -31,8 +31,9 @@ public class RealIdCardActivity extends BaseActivity {
     @Override
     public View getTitleView() {
         return new TitleBuilder(this)
-                .setLeftImage(R.mipmap.nav_menu_btn)
+                .setLeftImage(R.drawable.bt_selector_nav_menu)
                 .setTitleText("身份认证")
+                .setTitleBgRes(R.color.txt_color_f7f7f7)
                 .build();
     }
 

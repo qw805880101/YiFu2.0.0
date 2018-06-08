@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:background="@null"
             android:hint="持卡人姓名"
-            android:textColor="@color/txt_color_b3b4b5"
+            android:textColor="@color/txt_color_232323"
             android:textSize="17sp" />
 
     </LinearLayout>
@@ -57,7 +57,7 @@
             android:layout_height="match_parent"
             android:background="@null"
             android:hint="持卡人身份证号"
-            android:textColor="@color/txt_color_b3b4b5"
+            android:textColor="@color/txt_color_232323"
             android:textSize="17sp" />
 
     </LinearLayout>
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
-            android:textColor="@color/txt_color_b3b4b5"
+            android:textColor="@color/txt_color_232323"
             android:textSize="17sp" />
 
     </LinearLayout>
@@ -112,7 +112,7 @@
             android:layout_height="match_parent"
             android:background="@null"
             android:hint=""
-            android:textColor="@color/txt_color_b3b4b5"
+            android:textColor="@color/txt_color_232323"
             android:textSize="17sp" />
 
     </LinearLayout>

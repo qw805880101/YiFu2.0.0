@@ -1,8 +1,6 @@
 package com.bypay.yifu.activity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -22,8 +20,6 @@ import com.bypay.yifu.Utils.StringUtil;
 import com.bypay.yifu.Utils.Utils;
 import com.bypay.yifu.base.BaseActivity;
 import com.bypay.yifu.bean.UserInfoDto;
-import com.bypay.yifu.db.DBManager;
-import com.bypay.yifu.db.MyDatabaseHelper;
 import com.psylife.wrmvplibrary.utils.SpUtils;
 import com.psylife.wrmvplibrary.utils.StringUtils;
 import com.psylife.wrmvplibrary.utils.ToastUtils;
